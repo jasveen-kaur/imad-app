@@ -9,5 +9,5 @@ element.innerHTML="Javeen Kaur";
 var img =document.getElementById("modi");
 
 modi.onClick= function(){
-    img.style.marginRight="100px";
+    modi.style.marginRight="100px";
 };
