@@ -9,9 +9,9 @@ element.innerHTML="Javeen Kaur";
 var img =document.getElementById("modi");
 var marginLeft =0;
 function moveRight(){
-    marginLeft= marginLeft + 10;
+    marginLeft= marginLeft + 5;
     img.style.marginLeft= marginLeft + 'px';
 }
 img.onclick= function(){
-    var inerval= setInterval(moveRight ,100);
+    var inerval= setInterval(moveRight ,50);
 };
