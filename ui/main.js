@@ -4,3 +4,10 @@ console.log('Loaded!');
 var element =document.getElementById("main-text");
 
 element.innerHTML="Javeen Kaur";
+
+//move the img
+var img =document.getElementById("img");
+
+img.onClick= function(){
+    img.style.marginRight="100px";
+};
