@@ -1,17 +1,25 @@
-console.log('Loaded!');
+//Counter code
+var button =document.getElementById("counter");
 
-//change the text of main text div
-var element =document.getElementById("main-text");
-
-element.innerHTML="Jasveen Kaur";
-
-//move the img
-var img =document.getElementById("modi");
-var marginLeft =0;
-function moveRight(){
-    marginLeft= marginLeft + 3;
-    img.style.marginLeft= marginLeft + 'px';
-}
-img.onclick= function(){
-    var inerval= setInterval(moveRight ,50);
+button.onclick= function(){
+    
+    //create a request object
+    var request =new XMLHttpRequest();
+    
+    //captures the response and store it in a variable
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            //Take some action
+            if(request.status === 200){
+                var counter = request.responseText;
+                var span= document.getElementById('count');
+                span.innerHTML =counter.toString();
+            }
+        }
+        //not done yet
+    };
+    
+    //make the request
+    request.open('GET','http://jezzchhabra.imad.hasura-app.io/counter' ,true);
+    request.send(null);
 };
