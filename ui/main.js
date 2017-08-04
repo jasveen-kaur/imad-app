@@ -8,6 +8,6 @@ element.innerHTML="Javeen Kaur";
 //move the img
 var img =document.getElementById("modi");
 
-modi.onClick= function(){
-    modi.style.marginRight="100px";
+img.onClick= function(){
+    img.style.marginRight="100px";
 };
