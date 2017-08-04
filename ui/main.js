@@ -7,7 +7,11 @@ element.innerHTML="Javeen Kaur";
 
 //move the img
 var img =document.getElementById("modi");
-
+var marginLeft =0;
+function marginRight(){
+    marginLeft= marginLeft + 10;
+    img.style.marginLeft= marginLeft + 'px';
+}
 img.onclick= function(){
-    img.style.marginRight="100px";
+    var inerval= set.Interval(moveRight,100);
 };
