@@ -9,7 +9,7 @@ element.innerHTML="Jasveen Kaur";
 var img =document.getElementById("modi");
 var marginLeft =0;
 function moveRight(){
-    marginLeft= marginLeft + 1;
+    marginLeft= marginLeft + 3;
     img.style.marginLeft= marginLeft + 'px';
 }
 img.onclick= function(){
