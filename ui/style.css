@@ -21,10 +21,14 @@ body {
     height: 200px;
 }
 
+.headers{
+   font-family: LCDD;
+}
+
 .container{
     max-width: 800px;
     margin: 0 auto;
-    color: #a59696;
+    color: #bdb8b8;
     font-family: arial;
     padding-left: 50;
 }
