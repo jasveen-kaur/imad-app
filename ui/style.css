@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-image: URL('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSROknLl-6jiJsI6PaFDqHlxsklPVDPNZjC5W7bCAN2gSNoOhpF_A');
+    background-image: URL('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8-KhKAIPaFd77Yu8YzL8pB4-AKoS2d7B8sfpO98ZdndApd3nt');
     background-size:cover;
     margin-top: 75px;
 }
@@ -27,10 +27,5 @@ body {
     color: #a59696;
     font-family: arial;
     padding-left: 50;
-}
-
-.header1{
-    display: block;
-  border: 1px dashed grey;
 }
 
