@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-image: URL('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRy-dsSH_UYBPVKcxpeiXPnJk1PY-KwUgfLEph1kuvqUcA9yuW4Q');
+    background-image: URL('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMjRX8chNLRHM5nStdtA-M4FpWRBXV37QvIhfzV2EhRzEi6zY2Jg');
     background-size:cover;
     margin-top: 75px;
 }
@@ -23,7 +23,6 @@ body {
 
 .headers{
    font-family: LCDD;
-   text-shadow: 1px 1px 2px white;
    text-decoration: dashed;
    text-decoration: underline;
 }
