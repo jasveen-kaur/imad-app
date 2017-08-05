@@ -23,6 +23,8 @@ body {
 
 .headers{
    font-family: LCDD;
+   text-shadow: 1px 1px 2px white;
+   text-decoration: dashed;
 }
 
 .container{
