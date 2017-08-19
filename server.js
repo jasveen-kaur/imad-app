@@ -13,46 +13,6 @@ var config ={
 var app = express();
 app.use(morgan('combined'));
 
-
-var articles={
-    'article-one':{
-        title:'Article one I Jasveen Kaur',
-        heading:'Article-One',
-        date:'Augest 4, 2017',
-        content:`  
-                <p>
-                    HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..
-                </p>
-                <p>
-                    HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..
-                </p>
-                <p>
-                    HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..HELLO!This is Javseen Kaur..
-                </p>`
-        
-    },
-    'article-two':{
-        title:'Article two I Jasveen Kaur',
-        heading:'Article-two',
-        date:'Augest 8, 2017',
-        content:`  
-                <p>
-                    HELLO!This is Javseen Kaur..
-                    Its my second article!
-                </p>`
-    },
-    'article-three':{
-        title:'Article three I Jasveen Kaur',
-        heading:'Article-Three',
-        date:'Augest 12, 2017',
-        content:`  
-                <p>
-                    HELLO!This is Javseen Kaur..
-                    This is my third article!
-                </p>`
-    }
-};
-
 function createTemplate (data){
     var title= data.title;
     var date= data.date;
