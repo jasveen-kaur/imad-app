@@ -85,7 +85,8 @@ app.post('/create-user', function (req, res){
 app.get('/login', function(req,res){
     var username =req.body.username; 
    var password =req.body.password; 
-   pool.query('select  * from "user" where username=$1', [username], function(err, result){
+   
+   pool.query('select  * from "user" where username= $1', [username], function(err, result){
        if(err){
            res.status(500).send(err.toString());
        } else{
@@ -98,7 +99,7 @@ app.get('/login', function(req,res){
                if(hasedPassword === dbString){
                     res.send('credentials correct');
                }else{
-                    res.status(500).send(err.toString());
+                    res.send(403).send('username/password is invalid');
                }
            }
        } 
