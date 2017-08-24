@@ -86,7 +86,7 @@ app.get('/login', function(req,res){
     var username =req.body.username; 
    var password =req.body.password; 
    
-   pool.query('select  * from "user" where username= $1' [username], function(err, result){
+   pool.query('select  * from "user" where username= $1', [username], function(err, result){
        if(err){
            res.status(500).send(err.toString());
        } else{
@@ -133,7 +133,7 @@ app.get('/submit-name', function (req, res){ // /submit-name?name=XXXX
     res.send(JSON.stringify(names));
 });
 
-app.get('/articles/:articleName', function (req, res){
+/*app.get('/articles/:articleName', function (req, res){
     
     pool.query("select * from article where title= $1" ,[req.params.articleName], function(err,result){
       if(err){
@@ -147,7 +147,7 @@ app.get('/articles/:articleName', function (req, res){
           }
       } 
     });
-});
+});*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
