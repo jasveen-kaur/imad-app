@@ -135,7 +135,7 @@ app.get('/submit-name', function (req, res){ // /submit-name?name=XXXX
 
 app.get('/articles/:articleName', function (req, res){
     
-    pool.query("select * from article where title= $2" ,[req.params.articleName], function(err,result){
+    pool.query("select * from article where title= $1" ,[req.params.articleName], function(err,result){
       if(err){
           res.status(500).send(err.toString());
       } else{
