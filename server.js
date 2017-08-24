@@ -96,12 +96,11 @@ app.get('/login', function(req,res){
                var salt = dbString.split('$')[2];
                var hashedPassword = hash(password, salt);
                if(hasedPassword === dbString){
-                    res.send("credentials correct");
+                    res.send('credentials correct');
                }else{
                     res.status(500).send(err.toString());
                }
            }
-          
        } 
    });
 });
