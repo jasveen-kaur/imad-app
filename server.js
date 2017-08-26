@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var crypto =require('crypto');
-var bodyParse =require('body-parser');
+var bodyParser =require('body-parser');
 
 var config ={
     user: 'jezzchhabra',
@@ -14,7 +14,7 @@ var config ={
 };
 var app = express();
 app.use(morgan('combined'));
-app.use(bodyParse.json());
+app.use(bodyParser.json());
 
 function createTemplate (data){
     var title= data.title;
@@ -60,8 +60,8 @@ app.get('/', function (req, res) {
 });
 
 function hash (input, salt){
-    var hashed = crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
-    return['pbkdf2', '10000', salt, hashed.toString('hex')].join('$');
+    var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+    return["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
 }
 app.get('/hash/:input', function (req, res){
     var hashedString= hash(req.params.input, 'this-is-some-random-string');
@@ -77,16 +77,16 @@ app.post('/create-user', function (req, res){
        if(err){
            res.status(500).send(err.toString());
        } else{
-           res.send(JSON.stringify(result.rows));
+           res.send("user successfully created: " + username);
        } 
    });
 });
 
-app.get('/login', function(req,res){
+app.post('/login', function(req,res){
     var username =req.body.username; 
-   var password =req.body.password; 
+    var password =req.body.password; 
    
-   pool.query('select  * from "user" where username= $1', [username], function(err, result){
+    pool.query('select  * from "user" where username= $1', [username], function(err, result){
        if(err){
            res.status(500).send(err.toString());
        } else{
@@ -112,7 +112,7 @@ app.get('/test-db', function (req,res){
        if(err){
            res.status(500).send(err.toString());
        } else{
-           res.send('user successfully created' + username);
+           res.send(JSON.stringify(result.rows));
        }
     });
 });
